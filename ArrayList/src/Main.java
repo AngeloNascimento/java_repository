@@ -10,8 +10,9 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
         ArrayList<Integer> numeros = new ArrayList<>();
-        //List
+       /* //List
         //adicionar elementos- usa-se o metodo add();
         numeros.add(1);
         numeros.add(2);
@@ -38,13 +39,52 @@ public class Main {
             System.out.println(numero);
         }
 
-       /* for (int i=0; i<numeros.size(); i++){
+        */for (int i=0; i<numeros.size(); i++){
             System.out.println(numeros.get(i));
+        }
+
+
+        ArrayList<String> nomes = new ArrayList<>();
+        nomes.add("A");
+        nomes.add("B");
+        nomes.add("C");
+        nomes.add("D");
+        nomes.add("E");
+
+        /*System.out.println(nomes);
+        System.out.println("Digite a letra que deseja remover: ");
+        String remove = entrada.next().toUpperCase();
+
+        nomes.remove(remove);
+
+        System.out.println("Lista atualizada: \n" + nomes);*/
+
+        //Atualizando a lista
+        for (int i =0; i< nomes.size(); i++){
+            System.out.println(i + "-> "+ nomes);
+            System.out.println("qual indice deseja atualizar: ");
+            int i1 = entrada.nextInt();
+            System.out.println("Qual letra deseja adiciona: ");
+            String l1 = entrada.next().toUpperCase();
+
+            nomes.set(i1, l1);
+
+            System.out.println(nomes);
+        }
+
+
+       /* for(String nome: nomes){
+            System.out.println(nome.toUpperCase());
         }*/
 
 
 
 
 
+
+
     }
+
+
+
 }
